@@ -1,0 +1,121 @@
+.card {
+  width: 300px;
+  min-height: 100%;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0 0 0 / 0.1),
+    0.4rem 0.4rem 0.8rem rgba(0 0 0 / 0.1),
+    0.8rem 0.8rem 1.6rem rgba(0 0 0 / 0.1);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.seenIcon {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0 0 0 / 0.5);
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.cardImage {
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardOverlay {
+  background-color: rgba(0 0 0 / 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 2;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.cardHeader {
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.25s ease-in-out;
+}
+
+.cardInfo h3 {
+  margin-bottom: 2rem;
+}
+
+.cardFooter {
+  align-self: stretch;
+  padding: 1rem;
+  background-color: rgba(255 255 255 / 0.75);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.25s ease-in-out;
+}
+
+.cardFooter button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: rgba(0 0 0 / 0.5);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cardFooter button:active {
+  color: white;
+}
+
+.rating {
+  margin-left: auto;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0 0 0 / 0.5);
+  color: white;
+  font-weight: 600;
+}
+
+.rating i {
+  font-size: 0.4rem;
+}
+
+.card:hover .seenIcon {
+  opacity: 0;
+}
+
+.card:hover .cardOverlay {
+  opacity: 1;
+}
+
+.card:hover .cardInfo {
+  transform: translateY(0);
+}
+
+.card:hover .cardFooter {
+  transform: translateY(0);
+}

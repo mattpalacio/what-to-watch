@@ -1,0 +1,44 @@
+.header {
+  height: 5rem;
+  margin: 0 2rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.header h1 {
+  margin-right: auto;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.header li {
+  font-size: 1.2rem;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a:visited {
+  color: black;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+}
